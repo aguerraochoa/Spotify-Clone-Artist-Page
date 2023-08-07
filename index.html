@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/cca7afac3f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Spotify Remake</title>
+</head>
+<body>
+    <section class="main">
+        <section class="menu">
+            <div class="home">
+                <i class="fa-solid fa-house"></i>
+                <h3>Home</h3>
+            </div>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass magnifying-glass-1"></i>
+                <h3>Search</h3>
+            </div>
+        </section>
+        <section class="playlists">
+            <div class="header-playlists">
+                <div class="left-header">
+                    <i class="fa-solid fa-record-vinyl"></i>
+                    <h3>Your Library</h3>
+                </div>
+                <div class="right-header">
+                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+            <div class="selectors-playlists">
+                <button class="btn-selector" id="playlist-button">Playlists</button>
+                <button class="btn-selector" id="album-button">Albums</button>
+            </div>
+            <div class="search-recents">
+                <i class="fa-solid fa-magnifying-glass magnifying-glass-2"></i>
+                <div class="recents-down-menu">
+                    <h4>Recents</h4>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="album-list">
+                <div class="album" data-type="a">
+                    <img class="album-covers" src="./images/rubber-soul.jpg"/>
+                    <div class="album-info">
+                        <div class="album-name">Rubber Soul</div>
+                        <div class="album-artist">Album - The Beatles</div>
+                    </div>
+                </div>
+                <div class="album" data-type="p">
+                    <img class="album-covers" src="./images/continuum.jpg"/>
+                    <div class="album-info">
+                        <div class="album-name">Continuum</div>
+                        <div class="album-artist">Playlist - John Mayer</div>
+                    </div>
+                </div>
+                <div class="album" data-type="p">
+                    <img class="album-covers" src="./images/abbey-road.jpg"/>
+                    <div class="album-info">
+                        <div class="album-name">Abbey Road</div>
+                        <div class="album-artist">Playlist - Abbey Road</div>
+                    </div>
+                </div>
+                <div class="album" data-type="a">
+                    <img class="album-covers" src="./images/parcels.jpg"/>
+                    <div class="album-info">
+                        <div class="album-name">Parcels</div>
+                        <div class="album-artist">Album - Parcels</div>
+                    </div>
+                </div>
+                <div class="album" data-type="a">
+                    <img class="album-covers" src="./images/discovery.jpg"/>
+                    <div class="album-info">
+                        <div class="album-name">Discovery</div>
+                        <div class="album-artist">Album - Daft Punk</div>
+                    </div>
+                </div>
+                <div class="album" data-type="p">
+                    <img class="album-covers" src="./images/rumours.jpg"/>
+                    <div class="album-info">
+                        <div class="album-name">Rumours</div>
+                        <div class="album-artist">Playlist - Fleetwood Mac</div>
+                    </div>
+                </div>
+                <div class="album" data-type="a">
+                    <img class="album-covers" src="./images/whats-going-on.jpg"/>
+                    <div class="album-info">
+                        <div class="album-name">Whats Going On</div>
+                        <div class="album-artist">Album - Marvin Gaye</div>
+                    </div>
+                </div>
+                <div class="album" data-type="p">
+                    <img class="album-covers" src="./images/hopes-and-fears.jpg"/>
+                    <div class="album-info">
+                        <div class="album-name">Hopes and Fears</div>
+                        <div class="album-artist">Playlist - Keane</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="art">
+            <div class="art-icons">
+                <div class="arrow-icons">
+                    <i class="fa-solid fa-circle-arrow-left"></i>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </div>
+                <div class="user-icons">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-users"></i>
+                </div>
+            </div>
+            <div class="verified-artist">
+                <i class="fa-solid fa-check" style="color: #3686ed;"></i>
+                <p>Verified Artist</p>
+            </div>
+            <div class="artist-name">The Beatles</div>
+            <div class="artist-listeners">31,506,972 monthly listeners</div>
+        </section>
+        <section class="songs">
+            <div class="play-follow-more">
+                <div class="play-button">
+                    <i class="fa-solid fa-play green-icon"></i>
+                </div>
+                <button class="follow-button">FOLLOW</button>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="popular">Popular</div>
+            <section class="top-songs">
+                <div class="top-song">
+                    <div class="number">1</div>
+                    <img src="./images/abbey-road.jpg" class="mini-album"/>
+                    <div class="song-name">Here Comes The Sun - Remastered 2009</div>
+                    <div class="song-listens">1,033,880,006</div>
+                    <div class="heart"></div>
+                    <div class="time">3:05</div>
+                    <div class="more"></div>
+                </div>
+                <div class="top-song">
+                    <div class="number">2</div>
+                    <img src="./images/abbey-road.jpg" class="mini-album"/>
+                    <div class="song-name">Come Together - Remastered 2009</div>
+                    <div class="song-listens">618,169,839</div>
+                    <div class="heart"></div>
+                    <div class="time">4:19</div>
+                    <div class="more"></div>
+                </div>
+                <div class="top-song">
+                    <div class="number">3</div>
+                    <img src="./images/let-it-be.jpg" class="mini-album"/>
+                    <div class="song-name">Let It Be - Remastered 2009</div>
+                    <div class="song-listens">570,562,752</div>
+                    <div class="heart"></div>
+                    <div class="time">4:03</div>
+                    <div class="more"></div>
+                </div>
+                <div class="top-song">
+                    <div class="number">4</div>
+                    <img src="./images/help.jpg" class="mini-album"/>
+                    <div class="song-name">Yesterday - Remastered 2009</div>
+                    <div class="song-listens">591,499,952</div>
+                    <div class="heart"></div>
+                    <div class="time">2:05</div>
+                    <div class="more"></div>
+                </div>
+                <div class="top-song">
+                    <div class="number">5</div>
+                    <img src="./images/please-please-me.jpg" class="mini-album"/>
+                    <div class="song-name">Twist And Shout - Remastered 2009</div>
+                    <div class="song-listens">376,226,364</div>
+                    <div class="heart"></div>
+                    <div class="time">2:35</div>
+                    <div class="more"></div>
+                </div>
+            </section>
+        </section>
+        <section class="current-song">
+            <div class="current-song-album">
+                <img class="cs-album" src="./images/abbey-road.jpg"/>
+                <div class="cs-song-details">
+                    <div class="cs-name">Here Comes The Sun - Remastered 2009</div>
+                    <div class="cs-artist">The Beatles</div>
+                </div>
+            </div>
+            <div class="cs-heart">
+                <i class="fa-regular fa-heart cs-heart-icon"></i>
+            </div>
+            <div class="song-playing">
+                <audio class="audio" controls autoplay src="./audio/here-comes-the-sun.mp3">
+            </div>
+            <div class="current-icons">
+                <i class="fa-solid fa-microphone cs-icon"></i>
+                <i class="fa-solid fa-bars cs-icon"></i>
+                <i class="fa-solid fa-tv cs-icon"></i>
+                <i class="fa-solid fa-volume-high cs-icon"></i>
+                <progress class="progress" value="100" max="100"></progress>
+                <i class="fa-solid fa-up-right-and-down-left-from-center cs-icon"></i>
+            </div>
+        </section>
+    </section>
+    <script src="experiment.js"></script>
+</body>
+</html>
