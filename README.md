@@ -18,4 +18,5 @@ To get started with this project, you will need to have the following installed:
 Once you have all of the required dependencies installed, you can clone the repository and open the project in your web browser.
 
 Contributing
+
 This project is open to contributions. If you find any bugs or have any suggestions, please feel free to open an issue or submit a pull request.
