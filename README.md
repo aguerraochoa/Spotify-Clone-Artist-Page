@@ -1,6 +1,6 @@
 **Spotify Beatles Artist Page**
 
-This project is a recreation of the Beatles artist page on Spotify. Even though some javascript is used in some parts, this project was mainly created to practice my CSS skills. Therefore, the majority of the components are non-functional and for visual purposes only.
+This project is a recreation of the Beatles artist page on Spotify. Even though some JavaScript to add some functionalities, this project was mainly created to practice my CSS skills. Therefore, the majority of the components are non-functional and for visual purposes only.
 
 **Features**
 
