@@ -17,10 +17,11 @@ body {
     "playlists playlists playlists songs songs songs songs songs songs songs"
     "current-song current-song current-song current-song current-song current-song current-song current-song current-song current-song";
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 16.5vh 16.5vh 16.5vh 16.5vh 16.5vh 9vh;
+    grid-auto-rows: 143px 143px 143px 143px 143px 75px;
     gap: 10px;
     background-color: rgb(0,0,0);
-    padding: 10px
+    padding: 10px;
+    min-width: 1230px;
 }
 
 .menu{
@@ -48,7 +49,7 @@ body {
 
 .home:hover, .search:hover{
     color:white;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .fa-house, .magnifying-glass-1{
@@ -76,7 +77,7 @@ body {
 
 .left-header:hover{
     color:white;
-    cursor:grab
+    cursor:pointer
 }
 
 .left-header{
@@ -94,7 +95,7 @@ body {
 
 .fa-plus:hover, .fa-arrow-right:hover{
     color:white;
-    cursor:grab
+    cursor:pointer
 }
 
 .selectors-playlists{
@@ -114,7 +115,7 @@ body {
 .btn-selector:hover{
     background-color:rgb(43,42,43);
     color:rgb(255,255,255);
-    cursor:grab
+    cursor:pointer
 }
 
 .search-recents{
@@ -138,7 +139,7 @@ body {
 
 .recents-down-menu:hover, .magnifying-glass-2:hover{
     color: rgb(255,255,255);
-    cursor:grab
+    cursor:pointer
 }
 
 .album-list{
@@ -161,7 +162,7 @@ body {
 
 .album:hover{
     background-color: rgb(46,45,45);
-    cursor:grab;
+    cursor:pointer;
     border-radius:5px;
 }
 
@@ -209,15 +210,19 @@ body {
 }
 
 .user-icons{
-    display:flex;
-    gap:10px;
     font-size:25px;
     margin-top:18px;
     margin-right: 30px;
 }
 
-.fa-circle-arrow-left:hover, .fa-circle-arrow-right:hover, .fa-user:hover, .fa-users:hover{
-    cursor:grab;
+.fa-circle-chevron-left:hover, .fa-circle-chevron-right:hover, .fa-user:hover{
+    cursor:pointer;
+}
+
+@media (max-width: 700px) {
+    .user-icons {
+        display: none;
+    }
 }
 
 .verified-artist{
@@ -226,6 +231,7 @@ body {
     gap:10px;
     margin-left: 30px;
     margin-top: 15px;
+    align-items: center;
 }
 
 .fa-check{
@@ -245,6 +251,22 @@ body {
     margin-left: 30px;
 }
 
+@media (max-width: 950px) {
+    .verified-artist {
+        margin-top: 80px;
+    }
+
+    .artist-name {
+        font-size: 60px;
+    }
+
+    .verified-artist, .artist-name, .artist-listeners {
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+    }
+}
+
 .section{
     grid-area: songs;
     display: flex;
@@ -252,14 +274,15 @@ body {
 }
 
 .play-follow-more{
-    display: flex;
-    gap: 20px;
     margin-left: 30px;
-    margin-top:20px;
+    margin-top: 20px;
+    display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .play-button{
+    flex: 0 0 75px;
     height: 75px;
     width: 75px;
     background-color: rgb(36,209,95);
@@ -275,12 +298,13 @@ body {
 
 .play-button:hover{
     background-color: rgb(37,218,99);
-    cursor: grab;
+    cursor: pointer;
 }
 
 .fa-ellipsis{
     color:rgb(165,165,165);
     font-size: 30px;
+    display: inline;
 }
 
 .fa-ellipsis:hover{
@@ -304,7 +328,8 @@ body {
     padding: 0 20px;
     border: 1px solid rgb(96,95,96);
     background-color: transparent;
-    color: white
+    color: white;
+    display: inline;
 }
 
 .follow-button:hover{
@@ -328,14 +353,20 @@ body {
 
 .top-song{
     display: grid;
-    grid-template-columns: 0.4fr 1fr 9fr 6fr 1fr 1fr 1fr;
+    grid-template-columns: 10px 40px 500px 6fr 1fr 1fr 1fr;
     grid-template-areas: "number mini-album song-name song-listens heart time more";
     color: white;
-    gap:10px;
+    gap: 10px;
     margin-top: 5px;
     margin-left: 40px;
     align-items: center;
     padding: 7px 7px 7px 20px;
+}
+
+@media (max-width: 1250px) {
+    .top-song {
+        grid-template-columns: 10px 40px 400px 2fr 1fr 1fr 1fr;
+    }
 }
 
 .top-song:hover{
@@ -361,6 +392,19 @@ body {
     grid-area: song-name;
 }
 
+.song-name-limit {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+@media (max-width: 1080px) {
+    .song-name-limit {
+        width: 250px;
+    }
+}
+
 .song-listens{
     grid-area: song-listens;
     color: rgb(163,163,163);
@@ -381,7 +425,8 @@ body {
 }
 
 .fa-heart:hover{
-    color:rgb(250,250,250)
+    color:rgb(250,250,250);
+    cursor: pointer;
 }
 
 .time{
@@ -398,8 +443,9 @@ body {
     background-color: black;
     color: white;
     display: grid;
-    grid-template-columns: 7fr 1fr 8fr 3fr 4fr;
+    grid-template-columns: 400px 1fr 8fr 3fr 4fr;
     grid-template-areas: "current-song-album cs-heart song-playing . current-icons";
+    gap: 15px;
 }
 
 .current-song-album{
@@ -426,7 +472,22 @@ body {
 }
 
 .cs-name{
-    font-size: 15px
+    font-size: 15px;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+
+    .current-song {
+        grid-template-columns: 350px 1fr 8fr 3fr 4fr;
+    }
+
+    .cs-name {
+        width: 250px;
+    }
 }
 
 .cs-artist{
@@ -461,7 +522,7 @@ body {
     grid-area: current-icons;
     display: flex;
     gap: 13px;
-    color: rgb(226, 226, 226);
+    color: rgb(144, 144, 144);
     align-items: center;
     justify-content: center;
     margin-right: 20px
@@ -469,6 +530,7 @@ body {
 
 .cs-icon:hover{
     color: white;
+    cursor: pointer;
 }
 
 .progress{
