@@ -219,12 +219,6 @@ body {
     cursor:pointer;
 }
 
-@media (max-width: 700px) {
-    .user-icons {
-        display: none;
-    }
-}
-
 .verified-artist{
     color:rgb(255,255,255);
     display: flex;
